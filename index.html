@@ -1,0 +1,512 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f0426e",
+                        "background-light": "#fcf8f9",
+                        "background-dark": "#221015",
+                        "sage": "#7a8d81",
+                        "cream": "#fdfaf6"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="text-primary">
+                    <span class="material-symbols-outlined text-4xl">local_florist</span>
+                </div>
+                <h2 class="text-xl font-serif font-bold tracking-tight">Club de las Flores</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-2"
+                    href="index.html">
+                    <span class="material-symbols-outlined text-xl">home</span>
+                    Inicio
+                </a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="/nosotros.html">Sobre
+                    nosotros</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#planes">Planes</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#como-funciona">Cómo
+                    funciona</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="/faq.html">Preguntas
+                    Frecuentes</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#galeria">Galería</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#beneficios">Beneficios</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="prompts.html"
+                    class="bg-gradient-to-r from-primary to-rose-400 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg hover:shadow-primary/30 transition-all hover:scale-105">
+                    Prompts
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-12 pb-24 lg:pt-20">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="z-10">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">Suscripción
+                        Premium</span>
+                    <h1 class="text-5xl lg:text-7xl font-serif leading-[1.1] mb-8">
+                        Flores frescas <br />cada mes en <i class="font-serif italic">tu hogar.</i>
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-lg leading-relaxed">
+                        Lleva la frescura y la elegancia de los mercados de flores europeos directamente a tu puerta,
+                        curadas por expertos artesanos.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="suscripcion.html"
+                            class="bg-primary text-white px-8 py-4 rounded-lg text-base font-bold hover:scale-[1.02] transition-transform text-center">
+                            Suscribirme ahora
+                        </a>
+                        <button
+                            class="bg-white dark:bg-slate-800 border border-primary/20 px-8 py-4 rounded-lg text-base font-bold hover:bg-primary/5 transition-colors">
+                            Ver Catálogo
+                        </button>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/5 rounded-3xl -rotate-2 group-hover:rotate-0 transition-transform">
+                    </div>
+                    <div class="relative h-[600px] w-full rounded-2xl bg-center bg-cover shadow-2xl overflow-hidden"
+                        data-alt="Beautiful bouquet in a sunlit Parisian-style apartment window"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrSLP729cSW7mRteSZ1QevDZsd5jEQ8o7mEuTP_MOjHZwMPpgbqnhB9foCkigaC8xvOyY6lce0sm2hBgbRj6BhIFZqNLSagqawF0Hci5u46Lmr__Qs7a3PY8Zj2DzYndBsolB6-WK37sag0cybAH1FIRuynVv65W872fvli14C6NlAdgbSDN5_ETtMo00SsLkGZeihcEqZb04UEor1SsHhcsETouWyYzMtW6AG3FvveJo8joRh6u3orA6F6XurV9DQi8jP7q2E7BU')">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How It Works -->
+        <section class="py-24 bg-cream dark:bg-slate-900/50" id="como-funciona">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-serif mb-4">La Experiencia del Club</h2>
+                    <div class="w-16 h-1 bg-primary/30 mx-auto"></div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="flex flex-col items-center text-center group">
+                        <div
+                            class="size-20 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center mb-6 shadow-sm border border-primary/10 group-hover:border-primary transition-colors">
+                            <span class="material-symbols-outlined text-3xl text-primary">calendar_month</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Elige tu plan</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Selecciona la frecuencia y el tamaño que mejor se
+                            adapte a tu estilo de vida.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center group">
+                        <div
+                            class="size-20 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center mb-6 shadow-sm border border-primary/10 group-hover:border-primary transition-colors">
+                            <span class="material-symbols-outlined text-3xl text-primary">local_shipping</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Recibe flores frescas</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Flores cortadas el mismo día, enviadas con cuidado
+                            artesanal a tu puerta.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center group">
+                        <div
+                            class="size-20 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center mb-6 shadow-sm border border-primary/10 group-hover:border-primary transition-colors">
+                            <span class="material-symbols-outlined text-3xl text-primary">auto_awesome</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Disfrútalas en tu hogar</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Embellece cada rincón con fragancias naturales y
+                            colores vibrantes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Subscription Plans -->
+        <section class="py-24" id="planes">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-serif mb-4">Nuestros Planes</h2>
+                    <p class="text-slate-500 max-w-xl mx-auto">Sin contratos, sin complicaciones. Cancela o pausa cuando
+                        quieras.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Small Plan -->
+                    <div
+                        class="bg-white dark:bg-slate-800 p-10 rounded-2xl border border-primary/10 flex flex-col hover:shadow-xl transition-shadow">
+                        <h3 class="text-lg font-bold mb-2">Plan Pequeño</h3>
+                        <div class="flex items-baseline gap-1 mb-6">
+                            <span class="text-4xl font-bold">Bs. 245</span>
+                            <span class="text-slate-500">/mes</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-grow text-sm">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span> 1 Ramo de
+                                temporada</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span> 10-12
+                                tallos seleccionados</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span> Envío
+                                gratuito</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-slate-300 text-lg">cancel</span> Guía de
+                                cuidados</li>
+                        </ul>
+                        <a href="suscripcion.html"
+                            class="w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all text-center">Suscribirme</a>
+                    </div>
+                    <!-- Medium Plan (Featured) -->
+                    <div
+                        class="bg-white dark:bg-slate-800 p-10 rounded-2xl border-2 border-primary relative flex flex-col shadow-2xl scale-105 z-10">
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                            Recomendado</div>
+                        <h3 class="text-lg font-bold mb-2 text-primary">Plan Mediano</h3>
+                        <div class="flex items-baseline gap-1 mb-6">
+                            <span class="text-4xl font-bold">Bs. 385</span>
+                            <span class="text-slate-500">/mes</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-grow text-sm">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span> 1 Ramo
+                                grande de diseño</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span> 18-22
+                                tallos premium</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span> Envío
+                                prioritario gratuito</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span> Guía de
+                                cuidados digital</li>
+                        </ul>
+                        <a href="suscripcion.html"
+                            class="w-full py-3 rounded-lg bg-primary text-white font-bold hover:opacity-90 transition-opacity text-center">Suscribirme</a>
+                    </div>
+                    <!-- Premium Plan -->
+                    <div
+                        class="bg-white dark:bg-slate-800 p-10 rounded-2xl border border-primary/10 flex flex-col hover:shadow-xl transition-shadow">
+                        <h3 class="text-lg font-bold mb-2">Plan Premium</h3>
+                        <div class="flex items-baseline gap-1 mb-6">
+                            <span class="text-4xl font-bold">Bs. 595</span>
+                            <span class="text-slate-500">/mes</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-grow text-sm">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span> 2 Ramos
+                                premium al mes</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span> Flores
+                                exóticas de temporada</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span> Jarrón de
+                                cristal de regalo</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Nutrientes premium incluidos</li>
+                        </ul>
+                        <a href="suscripcion.html"
+                            class="w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all text-center">Suscribirme</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Lifestyle Gallery -->
+        <section class="py-24 bg-cream/50 dark:bg-slate-900/30" id="galeria">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-serif mb-4">Inspiración Floral</h2>
+                    <p class="text-slate-500">Descubre cómo nuestras flores transforman espacios cotidianos.</p>
+                </div>
+                <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                    <!-- Subcategoría 1: Flores por temporada -->
+                    <a href="galeria-temporada.html"
+                        class="break-inside-avoid block group rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform relative">
+                        <div class="h-80 bg-cover bg-center" style="background-image: url('Flores_temporada_png.png')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-white font-serif text-xl font-bold">Flores por temporada</h3>
+                            <span class="text-white/80 text-sm flex items-center gap-1 mt-1">Ver galería <span
+                                    class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                        </div>
+                    </a>
+                    <!-- Subcategoría 2: Presentación / Packaging -->
+                    <a href="galeria-packaging.html"
+                        class="break-inside-avoid block group rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform relative">
+                        <div class="h-80 bg-cover bg-center"
+                            style="background-image: url('presentacion_packaging_png.png')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-white font-serif text-xl font-bold">Presentación / Packaging</h3>
+                            <span class="text-white/80 text-sm flex items-center gap-1 mt-1">Ver galería <span
+                                    class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                        </div>
+                    </a>
+                    <div
+                        class="break-inside-avoid rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform">
+                        <div class="h-64 bg-cover bg-center" data-alt="Fresh flowers on a minimalist dining table"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyXJPqpjC9ANnRmv1XhJouB_x1Ao4z42Ii1LM1mBW1O_KsfBhaHIkRl9FeqPjMkibrwyUByAUGITo8YxIXHtcrCZ9oSvfs6YvZYGGAfAGjCIwmW_l0faoK4wP52mhsWVmbUD40YelxpDIVxB3s3lAOA6FEsqEluTR9xGvLqDBhIsbLeCswPpN8qWzU_8Rolb3nH5F8iMjPtRzlhfAeyt8upNgzeevQ4mkZtkPgP-DF9x_bOJ7vSe3xPdyNjEtliOtTzl5heVq7XhY')">
+                        </div>
+                    </div>
+                    <div
+                        class="break-inside-avoid rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform">
+                        <div class="h-[450px] bg-cover bg-center" data-alt="Artisanal flower packaging close up"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqJxRtmbA6Omv7DlkMlOm1w9IW-sA1kH4z7e0Cf2LNj6CjtiACz3gDSLKrRdOv9O6VZHXx7E0Z9Ax1cgvJG8V7E1pBm-qpkF6mFVNnT9q2oO9n4hk_3Zg2JDRCKd3lMHSBEfUZL6shW-W8iil6NylvddR2XSYuhuEc-Wkwb0KQrSG-M81-jJKC4OSqMg1cuZ-XgQe5SkxLwVXpdyNOPLvDLpfUWy6238rSaUDv17xvtgclaOXV7KYg0nDIAFBj_vh_GDCImR9_0Dg')">
+                        </div>
+                    </div>
+                    <div
+                        class="break-inside-avoid rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform">
+                        <div class="h-80 bg-cover bg-center" data-alt="Happy person holding a large colorful bouquet"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAifa8Zvabh29mf4c5C4qKWqLC9ddD0wq8H7RaTQ7XoueXZtFBnF6xaCWYzwq37XMiIghFgQb-mDiM4B0D6R1thd5QvY4niFRjNNe3QhIYAB7Zaqk0EtGGNc4cFFs_8p16vm7ctWXLjl6Wj0M077mmoLL2ApmLT07Ivbs-vHeHpcZ-02TNx_z_xLW4WiexsO2sLJmb7Q-iDLzpHRFY8yrT201OzPN9uirsz-QYGnwdcI6iOBKpbEubC8HFZkZzXHDbtdoMB_MrE2BU')">
+                        </div>
+                    </div>
+                    <div
+                        class="break-inside-avoid rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform">
+                        <div class="h-[400px] bg-cover bg-center" data-alt="Flowers in a ceramic vase in a bedroom"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBON7KMPXIbc9GC4_3OkoAHTq5cHqX1avm2yuza7F1eS0BEznrKjA8RDw4Z7cMAaf1M3BOujn9qB1SPfXydkRVhx5P5Nr4_1BiWyiF94Iv29XwBosw4duQN4OpkII76Cb4CWuvH-Cki2d7X-9psdNp81OXpQvxaqOIqyb5WdQ_3sMM0j7pfHSmRkMmHbaeXY-S3dQi-RIj6dLOkAEzulmsXtNw5AWr95n_vYa3wEPBiJusgmoELq3DtlOfe3QY2WHuv4DSaWn9Z4L0')">
+                        </div>
+                    </div>
+                    <div
+                        class="break-inside-avoid rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform">
+                        <div class="h-64 bg-cover bg-center" data-alt="Floral arrangement workshop setup"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6J14b6151pWvCLzWewM3uEetfWvhVJi8lt5XZN3ty__JoIQt-zdLIO-2SiDjxq1edouzk6hYI4rVM3tcJtUuAqImNWTk68uY1wWuJeVcqeOM4tIoIw3pE8tcJroNc5Nveo_hBtLSFOSwQJnDdokdm46huHtDTuYM6999cQNw1j_HRWnUWaP-0zKfkz95JX5zTIZyUrzkZ7an_509V0n-tSMq1l5r-4O7POR6HCRUhIBAavYUxTSzBpyXVu01ihRtstgIPXh74UII')">
+                        </div>
+                    </div>
+                    <div
+                        class="break-inside-avoid rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform">
+                        <div class="h-[350px] bg-cover bg-center" data-alt="Morning light on roses in a living room"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdaGSAGMDNCG-WIWVuAVPqz2bmPcb4Cb65_SIByFTHi7VF9UaZ2vBrrkrbS5-IUEHFftj6o5dUL_jTeerhO2fnVDgb2U6RvcXy33-J8rHM5ViEUIt0LjzoerCKWTV10a7pgcwAFt8Yq0izox1wVR_LcDrfDIlzDuV6l5MiaYn_Aipc9eeAHfmC7Qm2NQ4L_aukWfLLX3GhnlICI382ces_U-X4hKbzdThvUPnUoJKv4XPbRLyGdeQUFEU9cWmgxnMixJffxVJnzgc')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience Section -->
+        <section class="py-24 bg-white dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Video Column -->
+                    <div class="space-y-6">
+                        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl bg-black aspect-video group">
+                            <video controls class="w-full h-full object-cover">
+                                <source src="Video.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-serif font-bold mb-2">Vive la Experiencia Club de las Flores</h3>
+                            <p class="text-slate-500">Un recorrido visual por el cuidado y la dedicación que ponemos en
+                                cada uno de nuestros ramos.</p>
+                        </div>
+                    </div>
+                    <!-- Audio Column -->
+                    <div class="bg-primary/5 rounded-[3rem] p-10 lg:p-14 space-y-8">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="size-16 bg-primary rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                                <span class="material-symbols-outlined text-4xl">graphic_eq</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-serif font-bold">Nuestra Esencia</h3>
+                                <p class="text-sm text-primary font-bold uppercase tracking-widest">Audio / Podcast</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-lg italic">
+                            "Escucha la historia detrás de cada pétalo y descubre por qué las flores son el alma del
+                            hogar."
+                        </p>
+                        <div class="bg-white dark:bg-slate-800 p-5 rounded-3xl shadow-sm border border-primary/10">
+                            <audio controls class="w-full">
+                                <source src="audio.mp3" type="audio/mpeg">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Benefits -->
+        <section class="py-24" id="beneficios">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="bg-slate-900 text-white rounded-[2rem] p-12 lg:p-20 overflow-hidden relative">
+                    <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+                        <span
+                            class="material-symbols-outlined text-[30rem] absolute -right-24 -top-24">local_florist</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h2 class="text-4xl font-serif mb-12">¿Por qué unirte al club?</h2>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                            <div>
+                                <span class="material-symbols-outlined text-primary text-4xl mb-4">eco</span>
+                                <h4 class="text-lg font-bold mb-2">Flores de Temporada</h4>
+                                <p class="text-slate-400 text-sm">Seleccionamos lo mejor de cada estación para
+                                    sorprenderte.</p>
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined text-primary text-4xl mb-4">home_pin</span>
+                                <h4 class="text-lg font-bold mb-2">Envío a Domicilio</h4>
+                                <p class="text-slate-400 text-sm">Directamente desde el campo a tu puerta sin
+                                    intermediarios.</p>
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined text-primary text-4xl mb-4">content_cut</span>
+                                <h4 class="text-lg font-bold mb-2">Curación Experta</h4>
+                                <p class="text-slate-400 text-sm">Diseños únicos creados por floristas profesionales.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined text-primary text-4xl mb-4">event_busy</span>
+                                <h4 class="text-lg font-bold mb-2">Total Flexibilidad</h4>
+                                <li class="text-slate-400 text-sm list-none">Cancela, pausa o cambia de plan en un solo
+                                    clic.</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-24 bg-white dark:bg-slate-900/10">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <h2 class="text-4xl font-serif mb-8 italic">"Cambió por completo la atmósfera de mi oficina en
+                            casa."</h2>
+                        <div class="flex items-center gap-4">
+                            <div class="size-16 rounded-full bg-cover bg-center border-2 border-primary/20"
+                                data-alt="Customer portrait - smiling woman"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAJh-ZxizJao78fqfnmIU5FDBnpSDlU7kEF1phKDMwrfYBlVefTT1Ri-p2lRdBSnK3ObYn_OxIjTlkp32bEHhBARMZE6QXWulSqdRs6sWX_lkvZCpNHFzJpitYvDMy7G-_5hcuE6FnmUVRstoSX9S99192c1PzIyywd6lto4PrNKISfMe8Oj56UIRM-uLo96DhCbTIhllYOoMQIgUMYSnc2Rl1Q1A8md8tltYJ3aX4YArx8WC4KaLRTRmtJ3hX_mdhYgQg-186cIQ')">
+                            </div>
+                            <div>
+                                <p class="font-bold">Elena Martínez</p>
+                                <p class="text-slate-500 text-sm">Suscriptora desde 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-8">
+                        <div class="bg-cream dark:bg-slate-800 p-8 rounded-xl border border-primary/5">
+                            <p class="text-slate-600 dark:text-slate-400 italic mb-6">"La calidad de las flores es
+                                superior a cualquier floristería que haya visitado. Duran semanas!"</p>
+                            <p class="font-bold text-sm">— Ricardo G.</p>
+                        </div>
+                        <div class="bg-cream dark:bg-slate-800 p-8 rounded-xl border border-primary/5">
+                            <p class="text-slate-600 dark:text-slate-400 italic mb-6">"Me encanta la sorpresa mensual.
+                                Siempre son variedades que no conocía y huelen de maravilla."</p>
+                            <p class="font-bold text-sm">— Sofía L.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section class="py-24 px-6">
+            <div
+                class="max-w-5xl mx-auto bg-primary rounded-[2.5rem] p-12 lg:p-20 text-center text-white relative overflow-hidden shadow-2xl">
+                <div class="absolute -left-10 -bottom-10 opacity-20 pointer-events-none">
+                    <span class="material-symbols-outlined text-[20rem]">spa</span>
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl lg:text-5xl font-serif mb-6">Empieza hoy tu suscripción de flores</h2>
+                    <p class="text-white/80 text-lg mb-12 max-w-2xl mx-auto">Únete a cientos de amantes de las flores y
+                        recibe un toque de elegancia natural cada mes.</p>
+                    <button
+                        class="bg-white text-primary px-10 py-5 rounded-full text-lg font-bold hover:bg-slate-100 transition-colors shadow-lg">
+                        Unirme al Club de las Flores
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-background-light dark:bg-background-dark border-t border-primary/10 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="text-primary">
+                        <span class="material-symbols-outlined text-3xl">local_florist</span>
+                    </div>
+                    <h2 class="text-xl font-serif font-bold">Club de las Flores</h2>
+                </div>
+                <p class="text-slate-500 max-w-sm mb-8">Redefiniendo el lujo cotidiano a través de la frescura y el
+                    diseño floral de inspiración europea.</p>
+                <div class="flex gap-4">
+                    <a class="size-10 rounded-full border border-primary/10 flex items-center justify-center hover:bg-primary/5 transition-colors text-primary"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl">share</span>
+                    </a>
+                    <a class="size-10 rounded-full border border-primary/10 flex items-center justify-center hover:bg-primary/5 transition-colors text-primary"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl">favorite</span>
+                    </a>
+                    <a class="size-10 rounded-full border border-primary/10 flex items-center justify-center hover:bg-primary/5 transition-colors text-primary"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl">mail</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Compañía</h4>
+                <ul class="space-y-4 text-slate-500 text-sm">
+                    <li><a class="hover:text-primary transition-colors" href="#">Nosotros</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Nuestro Proceso</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Prensa</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Soporte</h4>
+                <ul class="space-y-4 text-slate-500 text-sm">
+                    <li><a class="hover:text-primary transition-colors" href="/faq.html">FAQs</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Envíos</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Términos</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-16 border-t border-primary/10 mt-16 text-center text-slate-400 text-xs">
+            © 2024 Club de las Flores. Todos los derechos reservados.
+        </div>
+    </footer>
+</body>
+
+</html>

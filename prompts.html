@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Prompts - Club de las Flores</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f0426e",
+                        "background-light": "#fcf8f9",
+                        "background-dark": "#221015",
+                        "sage": "#7a8d81",
+                        "cream": "#fdfaf6"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="text-primary">
+                    <span class="material-symbols-outlined text-4xl">local_florist</span>
+                </div>
+                <h2 class="text-xl font-serif font-bold tracking-tight">Club de las Flores</h2>
+            </a>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-2"
+                    href="index.html">
+                    <span class="material-symbols-outlined text-xl">home</span>
+                    Inicio
+                </a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="nosotros.html">Sobre
+                    nosotros</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html#planes">Planes</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html#como-funciona">Cómo
+                    funciona</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="faq.html">Preguntas
+                    Frecuentes</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors"
+                    href="index.html#galeria">Galería</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors"
+                    href="index.html#beneficios">Beneficios</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="prompts.html"
+                    class="bg-gradient-to-r from-primary to-rose-400 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg hover:shadow-primary/30 transition-all hover:scale-105">
+                    Prompts
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[800px] mx-auto px-6 py-20">
+        <div class="mb-24 flex flex-col items-start">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-slate-900 dark:text-white text-left">
+                Prompts generados con IA para generar la página web</h1>
+            <p class="text-slate-500 text-lg italic text-left">Un registro informativo sobre las instrucciones
+                proporcionadas a diversos modelos de IA para construir cada sección de Club de las Flores.</p>
+        </div>
+
+        <div class="space-y-24">
+            <!-- Section 1 -->
+            <section class="flex flex-col items-start w-full">
+                <h2 class="text-2xl font-serif font-bold text-primary mb-2 text-left">Sección 1: Prompt para agregar
+                    preguntas frecuentes</h2>
+                <div class="mb-6">
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-slate-400 px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg">Herramienta:
+                        ChatGPT</span>
+                </div>
+
+                <div class="w-full space-y-4">
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Agrega un nuevo
+                        elemento de navegación llamado “Preguntas Frecuentes” en el header (menú principal) del sitio
+                        web. Cuando el usuario haga clic en “Preguntas Frecuentes”, debe ser dirigido a una nueva página
+                        dedicada exclusivamente a las preguntas frecuentes del servicio. En esta página genera 6
+                        preguntas frecuentes con sus respectivas respuestas, relacionadas con el servicio de suscripción
+                        de flores a domicilio.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Las preguntas
+                        pueden cubrir temas como:</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">- Cómo funciona la
+                        suscripción</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">- Cada cuánto se
+                        reciben las flores</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">- Métodos de pago
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">- Cómo cancelar o
+                        pausar la suscripción</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">- Zonas de entrega
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">- Si las flores
+                        son frescas y de temporada</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Todo el contenido
+                        debe estar en español, con un tono claro, amigable y orientado al cliente. La página de
+                        preguntas frecuentes debe tener un diseño limpio y moderno, fácil de leer, con cada pregunta
+                        claramente separada de su respuesta.</p>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="flex flex-col items-start w-full">
+                <h2 class="text-2xl font-serif font-bold text-primary mb-2 text-left">Sección 2: Prompt para hablar de
+                    la empresa</h2>
+                <div class="mb-6">
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-slate-400 px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg">Herramienta:
+                        ChatGPT</span>
+                </div>
+
+                <div class="w-full space-y-4">
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Agrega un nuevo
+                        elemento de navegación en el header (menú principal) llamado “Sobre nosotros” en el sitio web.
+                        Cuando el usuario haga clic en “Sobre nosotros”, debe abrirse una nueva página dedicada a la
+                        información de la marca.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">En esta página
+                        incluye las siguientes secciones:</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Quiénes somos: Un
+                        breve texto que explique qué es Club de las Flores, un servicio de suscripción que entrega ramos
+                        de flores frescas a domicilio y busca llevar belleza y naturaleza a los hogares cada mes.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Misión: Una
+                        declaración clara sobre el propósito del servicio: llevar flores frescas, crear experiencias
+                        especiales y conectar a las personas con la naturaleza.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Visión: Una visión
+                        inspiradora sobre convertirse en un referente en la entrega de flores a domicilio y en
+                        experiencias florales de calidad.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">El contenido debe
+                        estar escrito en español, con un tono cálido, cercano y elegante, acorde a una marca de flores.
+                        Diseña la página con un estilo visual limpio y moderno.</p>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="flex flex-col items-start w-full">
+                <h2 class="text-2xl font-serif font-bold text-primary mb-2 text-left">Sección 3: Prompt para configurar
+                    los botones de suscripción</h2>
+                <div class="mb-6">
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-slate-400 px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg">Herramienta:
+                        ChatGPT</span>
+                </div>
+
+                <div class="w-full space-y-4">
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Configura todos
+                        los botones de la landing page que tengan el texto “Suscribirme” para que, cuando el usuario
+                        haga clic en cualquiera de ellos, sea dirigido a una nueva página de suscripción. En esta nueva
+                        página crea un proceso de suscripción corto, simple y fácil de completar, con los siguientes
+                        pasos:</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left font-bold">1.
+                        Selección de plan</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Plan pequeño</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Plan mediano</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Plan premium</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left font-bold">2. Datos
+                        del usuario</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Nombre completo
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Correo electrónico
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Dirección de
+                        entrega</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left font-bold">3.
+                        Información de pago</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Nombre del titular
+                        de la tarjeta</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Número de tarjeta
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Fecha de
+                        vencimiento</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Código de
+                        seguridad (CVV)</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left font-bold">4.
+                        Confirmación de la suscripción</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Mostrar el
+                        mensaje:</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left italic">“¡Gracias
+                        por suscribirte a Club de las Flores! Tu primer ramo llegará pronto.” Todo el contenido debe
+                        estar en español y el diseño debe ser limpio, claro y moderno.</p>
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="flex flex-col items-start w-full">
+                <h2 class="text-2xl font-serif font-bold text-primary mb-2 text-left">Sección 4: Prompts para generar
+                    imágenes de la galería</h2>
+                <div class="mb-6">
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-slate-400 px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg">Herramienta:
+                        Gemini</span>
+                </div>
+
+                <div class="w-full space-y-4">
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Una sola imagen
+                        dividida en cuatro secciones que muestre ramos de flores de temporada: ramo de primavera con
+                        tulipanes y flores en tonos pastel, ramo de verano con girasoles y flores brillantes y
+                        coloridas, ramo de otoño con flores en tonos cálidos como naranja y rojo, ramo de invierno con
+                        flores blancas y ramas de pino. Fotografía floral elegante, luz natural, fondo minimalista,
+                        estilo de marca de flores premium. Tamaño: 1200 × 1600 las fotos deben tener el mismo estilo que
+                        la foto de referencia.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Una escena de
+                        packaging para una marca de flores llamada “Club de las Flores”. Una caja rústica de madera
+                        inspirada en los mercados europeos de flores, llena de ramos de flores frescas de temporada.
+                        Fotografía floral elegante, estética de marca premium, estilo mercado europeo de flores. Tamaño:
+                        1200 x 1600</p>
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="flex flex-col items-start w-full">
+                <h2 class="text-2xl font-serif font-bold text-primary mb-2 text-left">Sección 5: Prompt para generar
+                    video</h2>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-slate-400 px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg">Herramientas:
+                        lumalabs.ai</span>
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-slate-400 px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg">Herramientas:
+                        elevenlabs generative voice ai</span>
+                </div>
+
+                <div class="w-full space-y-4">
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Crear un video
+                        cinematográfico de 10 segundos que destaque el empaque y la entrega de un ramo de flores de
+                        “Club de las Flores”.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Escena 1: Primer
+                        plano de un florista colocando cuidadosamente un hermoso ramo de flores frescas dentro de una
+                        elegante caja de cartón rosa con la etiqueta “Club de las Flores”.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Escena 2: Un
+                        repartidor lleva la caja rosa con flores caminando por una calle de la ciudad.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left">Escena 3: El
+                        repartidor toca el timbre y una mujer abre la puerta y recibe las flores.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base text-left italic">Estilo:
+                        cinematográfico, iluminación natural suave, estética premium de estilo de vida, con enfoque en
+                        la caja de empaque rosa</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <footer class="py-12 border-t border-primary/10 text-center">
+        <p class="text-slate-400 text-sm">© 2026 Club de las Flores. Información para fines didácticos.</p>
+    </footer>
+</body>
+
+</html>

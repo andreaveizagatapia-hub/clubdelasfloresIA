@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Suscripción - Club de las Flores</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f0426e",
+                        "background-light": "#fcf8f9",
+                        "background-dark": "#221015",
+                        "sage": "#7a8d81",
+                        "cream": "#fdfaf6"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .step-hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <header class="h-20 border-b border-primary/10 flex items-center justify-between px-6">
+        <div class="w-32 invisible lg:visible"></div> <!-- Spacer for centering logo -->
+        <a href="index.html" class="flex items-center gap-3">
+            <div class="text-primary"><span class="material-symbols-outlined text-4xl">local_florist</span></div>
+            <h2 class="text-xl font-serif font-bold tracking-tight">Club de las Flores</h2>
+        </a>
+        <div class="flex items-center gap-4">
+            <a href="prompts.html"
+                class="bg-gradient-to-r from-primary to-rose-400 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg hover:shadow-primary/30 transition-all hover:scale-105">
+                Prompts
+            </a>
+        </div>
+
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 py-12">
+        <!-- Progress Bar -->
+        <div class="mb-12">
+            <div class="flex justify-between mb-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-primary" id="step-label">Paso 1: Selección
+                    de Plan</span>
+                <span class="text-xs font-bold" id="step-number">25%</span>
+            </div>
+            <div class="w-full bg-primary/10 h-2 rounded-full overflow-hidden">
+                <div id="progress-bar" class="bg-primary h-full transition-all duration-500" style="width: 25%"></div>
+            </div>
+        </div>
+
+        <!-- Step 1: Plan Selection -->
+        <div id="step-1" class="space-y-8">
+            <h1 class="text-3xl font-serif text-center mb-8">Elige tu plan ideal</h1>
+            <div class="grid gap-6">
+                <button onclick="nextStep(2, 'Plan Pequeño')"
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent hover:border-primary transition-all text-left group">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold">Plan Pequeño</h3>
+                        <span class="text-primary font-bold">Bs. 245/mes</span>
+                    </div>
+                    <p class="text-slate-500 text-sm">Perfecto para un toque de frescura semanal. 10-12 tallos
+                        seleccionados.</p>
+                </button>
+                <button onclick="nextStep(2, 'Plan Mediano')"
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border-2 border-primary transition-all text-left relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-[10px] px-3 py-1 font-bold uppercase">
+                        Popular</div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold">Plan Mediano</h3>
+                        <span class="text-primary font-bold">Bs. 385/mes</span>
+                    </div>
+                    <p class="text-slate-500 text-sm">Nuestra opción más equilibrada. 18-22 tallos premium.</p>
+                </button>
+                <button onclick="nextStep(2, 'Plan Premium')"
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent hover:border-primary transition-all text-left group">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold">Plan Premium</h3>
+                        <span class="text-primary font-bold">Bs. 595/mes</span>
+                    </div>
+                    <p class="text-slate-500 text-sm">Máxima exclusividad. 2 ramos premium y flores exóticas.</p>
+                </button>
+            </div>
+        </div>
+
+        <!-- Step 2: User Data -->
+        <div id="step-2" class="step-hidden space-y-8">
+            <h1 class="text-3xl font-serif text-center mb-8">Tus Datos</h1>
+            <form onsubmit="event.preventDefault(); nextStep(3)" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-bold mb-2">Nombre completo</label>
+                    <input type="text" required
+                        class="w-full p-4 rounded-xl border border-primary/20 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none"
+                        placeholder="Ej. Andrea Veizaga">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-2">Correo electrónico</label>
+                    <input type="email" required
+                        class="w-full p-4 rounded-xl border border-primary/20 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none"
+                        placeholder="andrea@ejemplo.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-2">Dirección de entrega</label>
+                    <textarea required
+                        class="w-full p-4 rounded-xl border border-primary/20 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none h-32"
+                        placeholder="Calle, número, zona..."></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary text-white py-4 rounded-xl font-bold hover:opacity-90 transition-opacity">Continuar
+                    al pago</button>
+            </form>
+        </div>
+
+        <!-- Step 3: Payment -->
+        <div id="step-3" class="step-hidden space-y-8">
+            <h1 class="text-3xl font-serif text-center mb-8">Información de Pago</h1>
+            <form onsubmit="event.preventDefault(); nextStep(4)" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-bold mb-2">Nombre del titular</label>
+                    <input type="text" required
+                        class="w-full p-4 rounded-xl border border-primary/20 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none"
+                        placeholder="Como aparece en la tarjeta">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-2">Número de tarjeta</label>
+                    <input type="text" required maxlength="16"
+                        class="w-full p-4 rounded-xl border border-primary/20 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none"
+                        placeholder="0000 0000 0000 0000">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Vencimiento</label>
+                        <input type="text" required placeholder="MM/AA"
+                            class="w-full p-4 rounded-xl border border-primary/20 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">CVV</label>
+                        <input type="text" required maxlength="3" placeholder="123"
+                            class="w-full p-4 rounded-xl border border-primary/20 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary outline-none">
+                    </div>
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary text-white py-4 rounded-xl font-bold hover:opacity-90 transition-opacity">Confirmar
+                    suscripción</button>
+            </form>
+        </div>
+
+        <!-- Step 4: Confirmation -->
+        <div id="step-4" class="step-hidden text-center space-y-8 py-12">
+            <div class="size-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="material-symbols-outlined text-6xl text-primary">check_circle</span>
+            </div>
+            <h1 class="text-4xl font-serif">¡Gracias por suscribirte!</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-md mx-auto">
+                Tu suscripción a <span class="text-primary font-bold" id="final-plan">la belleza</span> está confirmada.
+                Tu primer ramo llegará pronto.
+            </p>
+            <a href="index.html"
+                class="inline-block bg-primary text-white px-10 py-4 rounded-full font-bold hover:opacity-90 transition-opacity">Volver
+                al Inicio</a>
+        </div>
+    </main>
+
+    <script>
+        let selectedPlan = '';
+        function nextStep(step, plan = null) {
+            if (plan) selectedPlan = plan;
+
+            // Hide all steps
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`step-${i}`).classList.add('step-hidden');
+            }
+
+            // Show target step
+            document.getElementById(`step-${step}`).classList.remove('step-hidden');
+
+            // Update progress
+            const progress = (step / 4) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+            document.getElementById('step-number').innerText = `${progress}%`;
+
+            const labels = [
+                'Paso 1: Selección de Plan',
+                'Paso 2: Datos del Usuario',
+                'Paso 3: Información de Pago',
+                '¡Suscripción Completada!'
+            ];
+            document.getElementById('step-label').innerText = labels[step - 1];
+
+            if (step === 4) {
+                document.getElementById('final-plan').innerText = selectedPlan;
+            }
+
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+
+</html>

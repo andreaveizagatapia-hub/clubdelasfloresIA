@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Flores por Temporada - Club de las Flores</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f0426e",
+                        "background-light": "#fcf8f9",
+                        "background-dark": "#221015",
+                        "sage": "#7a8d81",
+                        "cream": "#fdfaf6"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="text-primary">
+                    <span class="material-symbols-outlined text-4xl">local_florist</span>
+                </div>
+                <h2 class="text-xl font-serif font-bold tracking-tight">Club de las Flores</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-2"
+                    href="index.html">
+                    <span class="material-symbols-outlined text-xl">home</span>
+                    Inicio
+                </a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="nosotros.html">Sobre
+                    nosotros</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html#planes">Planes</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html#como-funciona">Cómo
+                    funciona</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="faq.html">Preguntas
+                    Frecuentes</a>
+                <a class="text-sm font-medium text-primary" href="index.html#galeria">Galería</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors"
+                    href="index.html#beneficios">Beneficios</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="prompts.html"
+                    class="bg-gradient-to-r from-primary to-rose-400 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg hover:shadow-primary/30 transition-all hover:scale-105">
+                    Prompts
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="min-h-screen py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12">
+                <a href="index.html#galeria"
+                    class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all font-bold mb-4">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Volver a la galería
+                </a>
+                <h1 class="text-5xl font-serif mb-6">Flores por Temporada</h1>
+                <p class="text-slate-500 max-w-2xl text-lg">Cada estación trae consigo una belleza única. Descubre
+                    nuestra selección de flores más frescas organizadas por época del año.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Primavera -->
+                <div class="space-y-4">
+                    <div class="h-80 rounded-2xl overflow-hidden shadow-xl group">
+                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="Primavera">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold">Primavera</h3>
+                        <p class="text-slate-400 text-sm">Tulipanes, peonías y narcisos.</p>
+                    </div>
+                </div>
+                <!-- Verano -->
+                <div class="space-y-4">
+                    <div class="h-80 rounded-2xl overflow-hidden shadow-xl group">
+                        <img src="https://images.unsplash.com/photo-1533221216134-cfd309395f3b?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="Verano">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold">Verano</h3>
+                        <p class="text-slate-400 text-sm">Girasoles, dalias y lavanda.</p>
+                    </div>
+                </div>
+                <!-- Otoño -->
+                <div class="space-y-4">
+                    <div class="h-80 rounded-2xl overflow-hidden shadow-xl group">
+                        <img src="https://images.unsplash.com/photo-1471194402551-03706093554d?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="Otoño">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold">Otoño</h3>
+                        <p class="text-slate-400 text-sm">Crisantemos, aster y dalias oscuras.</p>
+                    </div>
+                </div>
+                <!-- Invierno -->
+                <div class="space-y-4">
+                    <div class="h-80 rounded-2xl overflow-hidden shadow-xl group">
+                        <img src="https://images.unsplash.com/photo-1482813271115-f860010884ef?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="Invierno">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold">Invierno</h3>
+                        <p class="text-slate-400 text-sm">Ranúnculos, amapolas y eucalipto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-primary/10">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>&copy; 2026 Club de las Flores. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
